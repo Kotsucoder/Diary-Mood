@@ -1,8 +1,11 @@
 import streamlit as st
 import glob
+import nltk
 from nltk.sentiment import SentimentIntensityAnalyzer
 import plotly.express as px
 from pathlib import Path
+
+nltk.download('vader_lexicon') # For some reason this is required?
 
 
 filepaths = sorted(glob.glob("diary/*.txt"))
